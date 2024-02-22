@@ -118,21 +118,21 @@ class _SettingScreenState extends State<SettingScreen> {
                   title: Text(AppLocale.systemInfo.getString(context)),
                   tiles: [
                     // 只有 Web 端才展示 App 下载
-                    if (PlatformTool.isWeb())
-                      SettingsTile(
-                        title: const Text('APP 下载'),
-                        trailing: Icon(
-                          Icons.download,
-                          size: MediaQuery.of(context).textScaleFactor * 18,
-                          color: Colors.grey,
-                        ),
-                        onPressed: (context) {
-                          launchUrlString(
-                            'https://aidea.aicode.cc',
-                            mode: LaunchMode.externalApplication,
-                          );
-                        },
-                      ),
+                    // if (PlatformTool.isWeb())
+                    //   SettingsTile(
+                    //     title: const Text('APP 下载'),
+                    //     trailing: Icon(
+                    //       Icons.download,
+                    //       size: MediaQuery.of(context).textScaleFactor * 18,
+                    //       color: Colors.grey,
+                    //     ),
+                    //     onPressed: (context) {
+                    //       launchUrlString(
+                    //         'https://aidea.aicode.cc',
+                    //         mode: LaunchMode.externalApplication,
+                    //       );
+                    //     },
+                    //   ),
                     // 服务状态
                     if (Ability().serviceStatusPage != '')
                       SettingsTile(
@@ -213,8 +213,8 @@ class _SettingScreenState extends State<SettingScreen> {
                         color: Colors.grey,
                       ),
                       onPressed: (_) {
-                        launchUrl(
-                            Uri.parse('https://ai.aicode.cc/terms-user.html'));
+                        launchUrl(Uri.parse(
+                            '$apiServerURL/public/info/terms-of-user'));
                       },
                     ),
                     // 隐私政策
@@ -227,11 +227,12 @@ class _SettingScreenState extends State<SettingScreen> {
                       ),
                       onPressed: (_) {
                         launchUrl(Uri.parse(
-                            'https://ai.aicode.cc/privacy-policy.html'));
+                            '$apiServerURL/public/info/privacy-policy'));
                       },
                     ),
 
                     // 关于
+                    /*
                     SettingsTile(
                       title: Text(AppLocale.about.getString(context)),
                       trailing: Icon(
@@ -243,7 +244,7 @@ class _SettingScreenState extends State<SettingScreen> {
                         var tapCount = 0;
                         showAboutDialog(
                           context: context,
-                          applicationName: 'AIdea',
+                          applicationName: '咕嘟AI助手',
                           applicationIcon: GestureDetector(
                             onTap: () {
                               if (userHasLabPermission(state)) {
@@ -274,6 +275,7 @@ class _SettingScreenState extends State<SettingScreen> {
                         );
                       },
                     ),
+                    */
                   ],
                 ),
 
@@ -323,7 +325,7 @@ class _SettingScreenState extends State<SettingScreen> {
                     ],
                   ),
                 // 社交媒体图标
-                _buildSocialIcons(context),
+                // _buildSocialIcons(context),
               ]);
             },
           ),

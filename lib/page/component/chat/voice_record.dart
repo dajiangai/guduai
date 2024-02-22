@@ -87,8 +87,7 @@ class _VoiceRecordState extends State<VoiceRecord> {
                 showCancelBtn: false,
                 title: '温馨提示',
                 child: Markdown(
-                  data:
-                      'Web 端暂不支持语音输入，敬请期待。\n\n要体验完整功能，您可[点击这里下载 AIdea APP](https://aidea.aicode.cc)。',
+                  data: 'Web 端暂不支持语音输入，敬请期待。',
                   onUrlTap: (value) {
                     launchUrlString(
                       value,

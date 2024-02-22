@@ -1,4 +1,5 @@
 import 'package:askaide/helper/ability.dart';
+import 'package:askaide/helper/env.dart';
 import 'package:askaide/lang/lang.dart';
 import 'package:askaide/page/component/coin.dart';
 import 'package:askaide/page/component/enhanced_button.dart';
@@ -83,7 +84,7 @@ class AccountQuotaCard extends StatelessWidget {
                     InkWell(
                       onTap: () {
                         launchUrl(
-                          Uri.parse('https://ai.aicode.cc/zhihuiguo.html'),
+                          Uri.parse('$apiServerURL/zhihuiguo.html'),
                         );
                       },
                       child: const Icon(

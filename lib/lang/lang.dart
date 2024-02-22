@@ -233,7 +233,7 @@ mixin AppLocale {
     uploading: '上传中...',
     robotIsThinkingMessage: '数字人正在思考中...',
     robotHasSomeError: '发送失败，重发该消息？',
-    appName: 'AIdea',
+    appName: '咕嘟AI助手',
     chatAnywhere: '聊一聊',
     homeTitle: '数字人',
     creativeIsland: '创作岛',
@@ -429,7 +429,7 @@ mixin AppLocale {
     robotIsThinkingMessage: 'Thinking...',
     robotHasSomeError:
         'There seems to be something wrong, Do you want to resend the message?',
-    appName: 'AIdea',
+    appName: '咕嘟AI助手',
     chatAnywhere: 'Chat',
     homeTitle: 'Characters',
     creativeIsland: 'Creative',
@@ -545,8 +545,7 @@ mixin AppLocale {
     errorLog: 'Error Log',
     report: 'Report',
     latestVersion: 'You are currently on the latest version',
-    aIdeaApp:
-        'AIdea is an app that allows you to converse with AI, and the app code is completely open source.',
+    aIdeaApp: '咕嘟AI助手 is an app that allows you to converse with AI',
     onceEnabledSmartOptimization:
         'Smart Optimization\n\nOnce enabled, AI will further refine and optimize your ideas.',
     gotIt: 'Got it',
